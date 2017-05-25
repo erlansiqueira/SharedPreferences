@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7ec78"
+    tools:context="sharedpreferences.cursoandroid.com.sharedpreferences.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@android:style/TextAppearance.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Qual o seu nome ?"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/SalvarId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="salvar" />
+
+    <TextView
+        android:id="@+id/textoExibicaoId"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olá. usuário não definido"
+        android:layout_below="@+id/SalvarId"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp" />
+</RelativeLayout>
