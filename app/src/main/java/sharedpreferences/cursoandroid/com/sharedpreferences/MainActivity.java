@@ -32,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences(ARQUIVO_PREFERENCIA, 0);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
 
-                if(texto.getText().toString().equals("")) {
+                if(editText.getText().toString().equals("")) {
                     Toast.makeText(MainActivity.this, "Por favor, preencha o nome", Toast.LENGTH_SHORT).show();
                 } else {
-                    editor.putString("nome",  texto.getText().toString());
-                    texto.setText("Ola, " + texto.getText().toString());
+                    editor.putString("nome", editText.getText().toString());
+                    editor.commit();
+                    texto.setText("Ola, " + editText.getText().toString());
                 }
             }
         });
@@ -45,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(ARQUIVO_PREFERENCIA, 0);
         if(sharedPreferences.contains("nome")) {
             String nomeUsuario = sharedPreferences.getString("nome", "usuario nao definido");
-            texto.setText(nomeUsuario);
+            texto.setText("Ola, " + nomeUsuario);
+
         } else {
             texto.setText("Ola, usuario nao definido");
         }
